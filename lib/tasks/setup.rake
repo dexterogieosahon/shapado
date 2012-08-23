@@ -199,7 +199,8 @@ namespace :setup do
 
   desc "Create/Update Versions"
   task :versions => [:environment] do
-    ShapadoVersion.reload! if ShapadoVersion.count == 0
+    # https://shapado.com/questions/rake-bootstrap-error-called-id-for-nil
+    ShapadoVersion.new(token: "free", price: 0).save!
   end
 
   task :index_tags => [:environment] do
