@@ -1,1 +1,19 @@
 rvm --create use @shapado
+
+# GC fine tuning. Inspiration from :
+# http://metaskills.net/2011/03/09/gc-tune-ruby-1.9.2-with-rvm/
+# http://web-l.nl/posts/15-tuning-ruby-s-garbage-collector-with-rvm-and-passenger
+# http://www.rubyenterpriseedition.com/documentation.html#_garbage_collector_and_object_space
+case "$rvm_ruby_string" in
+  *ree*|*ruby-1.9.3*)
+    export RUBY_HEAP_MIN_SLOTS=600000 # This is 60(!) times larger than default
+    export RUBY_GC_MALLOC_LIMIT=59000000 # This is 7 times larger than default
+    export RUBY_HEAP_FREE_MIN=100000 # This is 24 times larger than default
+    export RUBY_HEAP_SLOTS_INCREMENT=1000000
+    export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1.2
+    export RUBY_FREE_MIN=$RUBY_HEAP_FREE_MIN
+  ;;
+  *)
+    unset RUBY_HEAP_MIN_SLOTS RUBY_HEAP_SLOTS_INCREMENT RUBY_HEAP_SLOTS_GROWTH_FACTOR RUBY_GC_MALLOC_LIMIT RUBY_HEAP_FREE_MIN RUBY_FREE_MIN
+  ;;
+esac
