@@ -49,7 +49,7 @@ gem 'bug_hunter', :git => 'git://github.com/ricodigo/bug_hunter.git'
 
 gem 'goalie', '~> 0.0.4'
 gem 'dynamic_form'
-gem 'rinku', '~> 1.2.2', :require => 'rails_rinku'
+gem 'rinku', '~> 1.5.0', :require => 'rails_rinku'
 
 gem 'rack-recaptcha', '0.2.2', :require => 'rack/recaptcha'
 
