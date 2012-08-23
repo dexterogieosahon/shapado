@@ -7,7 +7,10 @@ coverage
 public/stylesheets/compiled/
 config/shapado.yml
 config/payments.yml
+config/newrelic.yml
+db/xapit
 data/*.dat
+shared/*.dat
 config/mongoid.yml
 config/database.yml
 config/auth_providers.yml
