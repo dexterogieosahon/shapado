@@ -548,6 +548,7 @@ DEPENDENCIES
   rack-recaptcha (= 0.2.2)
   rack-ssl
   rails (= 3.2.6)
+  rake
   rdiscount!
   redis
   redis-rails

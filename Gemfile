@@ -114,6 +114,7 @@ group :test do
 end
 
 group :development do
+  gem 'rake'
   gem 'pry'
   gem 'pry-rails'
   gem 'database_cleaner'
