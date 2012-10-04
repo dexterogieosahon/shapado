@@ -7,8 +7,6 @@
     $ sudo visudo
     and add:
 
-3. configure and upload config/shapado.yml to /etc/shapado.yml
-
 ---------------- copy from here -------------
 Defaults    env_keep += "RAILS_ROOT"
 Defaults    secure_path = "/usr/local/rvm/bin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
@@ -18,6 +16,7 @@ app     ALL=(ALL) NOPASSWD: ALL
 
     NOTE: you can revoke sudo permissions after installing the application
 
+3. configure and upload config/shapado.yml to /etc/shapado.yml
 
 == CLIENT SIDE
 
