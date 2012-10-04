@@ -22,7 +22,6 @@ class CloseRequest
   validates_presence_of :closeable
   validates_inclusion_of :reason, :in => REASONS
 
-
   validate :should_be_unique
   validate :check_reputation
 
